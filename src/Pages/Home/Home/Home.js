@@ -2,7 +2,8 @@ import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Menubar from '../../Shared/Menubar/Menubar';
 import Banner from '../Banner/Banner';
-import Bikes from '../Bikes/Bikes';
+import FeaturedBikes from '../Bikes/FeaturedBikes/FeaturedBikes';
+
 import Subscribe from '../Subscribe/Subscribe';
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
         <div>
             <Menubar></Menubar>
             <Banner></Banner>
-            <Bikes></Bikes>
+            <FeaturedBikes></FeaturedBikes>
             <Subscribe></Subscribe>
             <Footer></Footer>
         </div>

@@ -10,9 +10,15 @@ import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./context/AuthProvider";
 import Register from "./Pages/Login/Register/Register";
-import Bikes from "./Pages/Home/Bikes/Bikes";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import NotFound from "./Pages/NotFound/NotFound";
+import AddProducts from "./Pages/Dashboard/AddProducts/AddProducts";
+import Order from "./Pages/Purchase/Order/Order";
+import MyOrders from "./Pages/Dashboard/MyOrders/MyOrders";
+import AllOrders from "./Pages/Dashboard/AllOrders/AllOrders";
+import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
+import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
+
 
 function App() {
   return <AuthProvider>
@@ -24,14 +30,26 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <PrivateRoute path="/bikes">
-          <Bikes></Bikes>
-        </PrivateRoute>
         <Route path="/login">
           <Login></Login>
         </Route>
         <Route path="/register">
           <Register></Register>
+        </Route>
+        <PrivateRoute exact path='/purchase/:id'>
+          <Order></Order>
+        </PrivateRoute>
+        <PrivateRoute exact path='/myOrders'>
+          <MyOrders></MyOrders>
+        </PrivateRoute>
+        <PrivateRoute exact path='/manageOrders'>
+          <ManageOrders></ManageOrders>
+        </PrivateRoute>
+        <PrivateRoute exact path='/manageProducts'>
+          <ManageProducts></ManageProducts>
+        </PrivateRoute>
+        <Route path="/addProducts">
+          <AddProducts></AddProducts>
         </Route>
         <Route path="/dashboard">
           <Dashboard></Dashboard>
@@ -39,7 +57,6 @@ function App() {
         <Route path="*">
           <NotFound></NotFound>
         </Route>
-
       </Switch>
     </Router>
   </AuthProvider>

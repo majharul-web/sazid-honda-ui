@@ -20,15 +20,12 @@ const Menubar = () => {
                     <Nav className="me-auto ">
                         <Nav.Link as={Link} to="/home" active className=' mx-1'>Home</Nav.Link>
 
-                        <Nav.Link as={Link} to="/bikes" active className=' mx-1'>
-                            Bikes
-                        </Nav.Link>
-
                         <Nav.Link as={Link} to="/about" active className=' mx-1'>About</Nav.Link>
 
                     </Nav>
 
                     <Nav>
+                        <Nav.Link as={Link} to="/addProducts" active className=' mx-1'>Add Products</Nav.Link>
                         <Nav.Link as={Link} to="/dashboard" active className=' mx-1'>Dashboard</Nav.Link>
 
                         {
