@@ -49,6 +49,7 @@ const Register = () => {
                                         {authError}
                                     </Alert>
                                 }
+
                             </div>
                             <form className='d-flex flex-column justify-content-center align-items-center ' onSubmit={handleSubmit(onSubmit)}>
                                 <input

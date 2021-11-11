@@ -13,8 +13,14 @@ const Dashboard = () => {
                     <div className="row admin-container">
                         <div className="col-md-3 ">
                             <div className="admin-area p-1">
-                                <h6>Dashboard</h6>
-                                <div className="all-menu mt-5">
+                                <div>
+                                    <h3 className=' py-3 das-title'>
+                                        <span className='mx-3'><i class="fas fa-user-cog"></i></span>
+                                        Dashboard
+                                    </h3>
+                                </div>
+
+                                <div className="all-menu mt-2 ms-5">
                                     <li
                                         onClick={() => setControl("makeAdmin")}
                                         className="admin-menu p-2"
@@ -32,6 +38,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <div className="col-md-9 text-center  text-center">
+
                             {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}
                             {control === "allOrders" && <AllOrders></AllOrders>}
                         </div>

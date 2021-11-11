@@ -10,10 +10,9 @@ const Menubar = () => {
             <Container fluid className='mx-5 py-2'>
                 <Navbar.Brand >
                     <Link to='home' className='text-decoration-none text-danger'>
-                        <h2>
+                        <h2 className='fw-bold'>
                             SAZID Honda
                         </h2>
-
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -14,7 +14,6 @@ const Login = () => {
     const history = useHistory();
 
     const onSubmit = data => {
-        console.log(data);
         const email = data.email;
         const password = data.password;
 
@@ -39,6 +38,7 @@ const Login = () => {
                                         {authError}
                                     </Alert>
                                 }
+
                             </div>
                             <form className='d-flex flex-column justify-content-center align-items-center ' onSubmit={handleSubmit(onSubmit)}>
 

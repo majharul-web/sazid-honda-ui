@@ -1,0 +1,38 @@
+footer {
+  background-color: #040e27;
+  padding: 40px 0;
+}
+
+.footer_widget p {
+  color: #aab1b7;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.footer_widget p a {
+  color: #aab1b7;
+}
+
+.socail_links ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+  line-height: 36px;
+}
+
+.socail_links ul li a {
+  font-size: 15px;
+  color: #c3b2f0;
+  width: 30 px;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  margin-right: 7 px;
+  color: #ffffff;
+  line-height: 40px !important;
+  color: #e8e8e8;
+}
+.socail_links ul li a :hover {
+  color: #ec7411;
+}

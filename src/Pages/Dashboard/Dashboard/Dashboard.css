@@ -1,5 +1,5 @@
 .admin-area {
-  background: #000;
+  background: #ec1b5d;
   color: white;
   height: 100vh;
 }
@@ -10,6 +10,12 @@
   list-style: none;
   cursor: pointer;
 }
-.admin-menu:hover {
+.admin-menu {
+  color: black;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.das-title:hover {
   color: blue;
 }

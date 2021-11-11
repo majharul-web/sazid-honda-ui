@@ -23,8 +23,6 @@ const useFirebase = () => {
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
 
-                const user = result.user;
-                console.log(user);
             }).catch((error) => {
                 setAuthError(error.message);
             })
@@ -54,8 +52,6 @@ const useFirebase = () => {
                     console.log(error.message);
                 });
 
-                const user = userCredential.user;
-                console.log(user);
             })
             .catch((error) => {
                 setAuthError(error.message);
