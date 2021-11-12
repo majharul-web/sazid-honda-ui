@@ -13,7 +13,7 @@ const MyOrders = () => {
 
     // get data from database
     useEffect(() => {
-        fetch(`http://localhost:5000/MyOrders/${currentEmail}`)
+        fetch(`https://mighty-bayou-89893.herokuapp.com/MyOrders/${currentEmail}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [isDeleted, currentEmail])
@@ -22,7 +22,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to Delete');
         if (proceed) {
-            fetch(`http://localhost:5000/myOrders/order/delete/${id}`, {
+            fetch(`https://mighty-bayou-89893.herokuapp.com/myOrders/order/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

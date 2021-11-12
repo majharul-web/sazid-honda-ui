@@ -14,7 +14,7 @@ const MakeAdmin = () => {
         const user = { email };
         console.log(user);
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://mighty-bayou-89893.herokuapp.com/users/admin', {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

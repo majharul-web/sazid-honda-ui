@@ -7,7 +7,7 @@ const ManageProducts = () => {
 
     // get data from database
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://mighty-bayou-89893.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [isDeleted]);
@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to Delete');
         if (proceed) {
-            fetch(`http://localhost:5000/allProduct/product/delete/${id}`, {
+            fetch(`https://mighty-bayou-89893.herokuapp.com/allProduct/product/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

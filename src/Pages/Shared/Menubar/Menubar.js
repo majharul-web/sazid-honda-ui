@@ -21,7 +21,11 @@ const Menubar = () => {
 
                     <Nav className='ms-auto'>
                         <Nav.Link as={Link} to="/home" active className='fs-5 mx-1'>Home</Nav.Link>
-                        <Nav.Link as={Link} to="/dashboard" active className='fs-5 mx-1'>Dashboard</Nav.Link>
+                        {
+                            user.email &&
+                            <Nav.Link as={Link} to="/dashboard" active className='fs-5 mx-1'>Dashboard</Nav.Link>
+                        }
+
 
                         {
                             user?.email ?

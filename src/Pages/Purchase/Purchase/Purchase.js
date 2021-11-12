@@ -13,7 +13,7 @@ const Purchase = () => {
 
     // get data from database
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://mighty-bayou-89893.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
@@ -38,7 +38,7 @@ const Purchase = () => {
         data.productName = productName;
         data.status = 'pending';
 
-        axios.post('http://localhost:5000/addOrder', data)
+        axios.post('https://mighty-bayou-89893.herokuapp.com/addOrder', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Confirm Order');

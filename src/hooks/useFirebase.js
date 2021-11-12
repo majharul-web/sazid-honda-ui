@@ -116,7 +116,7 @@ const useFirebase = () => {
     // save user info into database
     const userInfoSaveDB = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('http://localhost:5000/addUser', {
+        fetch('https://mighty-bayou-89893.herokuapp.com/addUser', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -130,7 +130,7 @@ const useFirebase = () => {
 
     // get admin
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://mighty-bayou-89893.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

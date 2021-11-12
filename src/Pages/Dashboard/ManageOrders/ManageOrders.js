@@ -10,7 +10,7 @@ const ManageOrders = () => {
 
     // get data from database
     useEffect(() => {
-        fetch('http://localhost:5000/manageOrders')
+        fetch('https://mighty-bayou-89893.herokuapp.com/manageOrders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [isDeleted, isUpdated])
@@ -19,7 +19,7 @@ const ManageOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to Delete');
         if (proceed) {
-            fetch(`http://localhost:5000/allOrders/order/delete/${id}`, {
+            fetch(`https://mighty-bayou-89893.herokuapp.com/allOrders/order/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -40,7 +40,7 @@ const ManageOrders = () => {
 
     // update
     const handleUpdateStatus = (id) => {
-        fetch(`http://localhost:5000/orderStatus/update/${id}`,
+        fetch(`https://mighty-bayou-89893.herokuapp.com/orderStatus/update/${id}`,
             {
                 method: 'PUT',
                 headers: {
