@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
@@ -15,7 +15,13 @@ const Banner = () => {
                             className="d-block w-100 "
                             src="https://i.ibb.co/cxnqjVg/main-banner-01-1903x780.png" alt=''
                         />
+
                     </Link>
+                    <Carousel.Caption>
+                        <Link to='/explore'>
+                            <Button variant='danger' >Explore</Button>
+                        </Link>
+                    </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
@@ -26,6 +32,12 @@ const Banner = () => {
                         />
                     </Link>
 
+                    <Carousel.Caption>
+                        <Link to='/explore'>
+                            <Button variant='danger' >Explore</Button>
+                        </Link>
+                    </Carousel.Caption>
+
                 </Carousel.Item>
 
                 <Carousel.Item>
@@ -35,6 +47,12 @@ const Banner = () => {
                             src="https://i.ibb.co/JqmsgLv/main-banner-03-1903x780.png" alt=''
                         />
                     </Link>
+
+                    <Carousel.Caption>
+                        <Link to='/explore'>
+                            <Button variant='danger' >Explore</Button>
+                        </Link>
+                    </Carousel.Caption>
 
                 </Carousel.Item>
             </Carousel>

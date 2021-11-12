@@ -21,6 +21,7 @@ import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import Pay from "./Pages/Dashboard/Pay/Pay";
 import Review from "./Pages/Dashboard/Review/Review";
+import Explore from "./Pages/Explore/Explore/Explore";
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home></Home>
+        </Route>
+        <Route path="/explore">
+          <Explore></Explore>
         </Route>
         <Route path="/login">
           <Login></Login>

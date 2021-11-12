@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import AddProducts from '../AddProducts/AddProducts';
@@ -11,7 +11,7 @@ import Review from '../Review/Review';
 import './Dashboard.css';
 
 import {
-    Route,
+
     Switch,
     Link,
     useRouteMatch
@@ -77,7 +77,7 @@ const Dashboard = () => {
                                                 <li
                                                     onClick={() => setControl("pay")}
                                                     className="admin-menu p-2">
-                                                    <Link className='text-dark' to={`${url}/pay`}>My Pay</Link>
+                                                    <Link className='text-dark' to={`${url}/pay`}>Pay</Link>
 
                                                 </li>
                                                 <li
