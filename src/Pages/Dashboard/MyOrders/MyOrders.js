@@ -16,7 +16,7 @@ const MyOrders = () => {
         fetch(`http://localhost:5000/MyOrders/${currentEmail}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
-    }, [isDeleted])
+    }, [isDeleted, currentEmail])
 
     // delete
     const handleDelete = (id) => {

@@ -65,7 +65,7 @@ const ManageOrders = () => {
     return (
         <div className='container py-4'>
             <h3 className='py-3'>
-                My Orders :
+                All Orders :
                 <span className='text-danger ms-2'>
                     {allOrders.length}
                 </span>

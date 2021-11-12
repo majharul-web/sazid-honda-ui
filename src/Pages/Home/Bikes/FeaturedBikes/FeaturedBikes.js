@@ -17,7 +17,7 @@ const FeaturedBikes = () => {
             <div className="container">
                 <div className="row g-5">
                     {
-                        products.slice(0, 6).map(bike => <Bike bike={bike} key={bike.id}></Bike>)
+                        products.slice(0, 6).map(bike => <Bike bike={bike} key={bike._id}></Bike>)
                     }
 
                 </div>

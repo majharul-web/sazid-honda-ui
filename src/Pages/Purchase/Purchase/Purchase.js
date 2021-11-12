@@ -24,7 +24,7 @@ const Purchase = () => {
             const exactDestination = products.find(product => product._id == id);
             setExactProduct(exactDestination);
         }
-    }, [products]);
+    }, [products, id]);
 
     const { productName, imgURL, price, description } = exactProduct;
 

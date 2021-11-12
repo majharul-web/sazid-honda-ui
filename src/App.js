@@ -18,6 +18,9 @@ import MyOrders from "./Pages/Dashboard/MyOrders/MyOrders";
 import AllOrders from "./Pages/Dashboard/AllOrders/AllOrders";
 import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
+import Pay from "./Pages/Dashboard/Pay/Pay";
+import Review from "./Pages/Dashboard/Review/Review";
 
 
 function App() {
@@ -39,18 +42,6 @@ function App() {
         <PrivateRoute exact path='/purchase/:id'>
           <Order></Order>
         </PrivateRoute>
-        <PrivateRoute exact path='/myOrders'>
-          <MyOrders></MyOrders>
-        </PrivateRoute>
-        <PrivateRoute exact path='/manageOrders'>
-          <ManageOrders></ManageOrders>
-        </PrivateRoute>
-        <PrivateRoute exact path='/manageProducts'>
-          <ManageProducts></ManageProducts>
-        </PrivateRoute>
-        <Route path="/addProducts">
-          <AddProducts></AddProducts>
-        </Route>
         <Route path="/dashboard">
           <Dashboard></Dashboard>
         </Route>
