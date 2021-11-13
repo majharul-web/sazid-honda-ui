@@ -30,7 +30,7 @@ const useFirebase = () => {
                 userInfoSaveDB(user.email, user.displayName, "PUT");
 
                 // page redirect
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/dashboard';
                 history.replace(destination);
 
             }).catch((error) => {
@@ -63,7 +63,7 @@ const useFirebase = () => {
                         console.log(error.message);
                     });
 
-                history.replace('/');
+                history.replace('/dashboard');
 
             })
             .catch((error) => {
@@ -85,7 +85,7 @@ const useFirebase = () => {
                 reset();
 
                 // redirect
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/dashboard';
                 history.replace(destination)
 
                 const user = userCredential.user;

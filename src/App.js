@@ -46,9 +46,9 @@ function App() {
         <PrivateRoute exact path='/purchase/:id'>
           <Order></Order>
         </PrivateRoute>
-        <Route path="/dashboard">
+        <PrivateRoute path="/dashboard">
           <Dashboard></Dashboard>
-        </Route>
+        </PrivateRoute>
         <Route path="*">
           <NotFound></NotFound>
         </Route>

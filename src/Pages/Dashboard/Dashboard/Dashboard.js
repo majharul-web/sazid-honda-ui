@@ -11,16 +11,17 @@ import Review from '../Review/Review';
 import './Dashboard.css';
 
 import {
-
+    Route,
     Switch,
     Link,
     useRouteMatch
 } from "react-router-dom";
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
+import DashHome from '../DashHome/DashHome';
 
 const Dashboard = () => {
-    const [control, setControl] = useState(null);
+    const [control, setControl] = useState("dashHome");
     const { logOut, user, admin } = useAuth();
     console.log(admin);
 
@@ -67,12 +68,13 @@ const Dashboard = () => {
                                                     className="admin-menu p-2">
                                                     <Link className='text-dark' to={`${url}/makeAdmin`}>Make Admin</Link>
                                                 </li>
-                                            </div> :
+                                            </div>
+                                            :
                                             <div>
                                                 <li
                                                     onClick={() => setControl("myOrders")}
                                                     className="admin-menu p-2">
-                                                    <Link className='text-dark' to={`${url}/`}>My Orders</Link>
+                                                    <Link className='text-dark' to={`${url}/myOrders`}>My Orders</Link>
                                                 </li>
                                                 <li
                                                     onClick={() => setControl("pay")}
@@ -101,7 +103,7 @@ const Dashboard = () => {
 
                         <div className="col-md-9 text-center  text-center">
                             <Switch>
-                                <PrivateRoute exact path={path}>
+                                <PrivateRoute path={`${path}/myOrders`}>
                                     {control === "myOrders" && <MyOrders></MyOrders>}
                                 </PrivateRoute>
                                 <PrivateRoute path={`${path}/pay`}>
@@ -123,7 +125,6 @@ const Dashboard = () => {
                                     {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}
                                 </AdminRoute>
                             </Switch>
-
                         </div>
                     </div>
                 </div>
