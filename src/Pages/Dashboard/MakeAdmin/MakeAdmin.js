@@ -1,11 +1,10 @@
-import axios from 'axios';
+
 import React, { useState } from 'react';
 import { Alert, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import useAuth from '../../../hooks/useAuth';
+
 
 const MakeAdmin = () => {
-    const { user } = useAuth();
     const [success, setSuccess] = useState(false);
 
     const { register, handleSubmit, reset } = useForm();

@@ -34,7 +34,7 @@ const ManageProducts = () => {
         }
 
     }
-    console.log(products);
+
     return (
         <div className='container py-4'>
             <h3 className='py-3'>

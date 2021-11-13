@@ -7,23 +7,20 @@ import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import MyOrders from '../MyOrders/MyOrders';
 import Pay from '../Pay/Pay';
-import Review from '../Review/Review';
+import AddReview from '../AddReview/AddReview';
 import './Dashboard.css';
 
 import {
-    Route,
     Switch,
     Link,
     useRouteMatch
 } from "react-router-dom";
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
-import DashHome from '../DashHome/DashHome';
 
 const Dashboard = () => {
     const [control, setControl] = useState("dashHome");
-    const { logOut, user, admin } = useAuth();
-    console.log(admin);
+    const { logOut, admin } = useAuth();
 
     let { path, url } = useRouteMatch();
 
@@ -110,7 +107,7 @@ const Dashboard = () => {
                                     {control === "pay" && <Pay></Pay>}
                                 </PrivateRoute>
                                 <PrivateRoute path={`${path}/review`}>
-                                    {control === "review" && <Review></Review>}
+                                    {control === "review" && <AddReview></AddReview>}
                                 </PrivateRoute>
                                 <AdminRoute path={`${path}/manageOrders`}>
                                     {control === "manageOrders" && <ManageOrders></ManageOrders>}
