@@ -85,10 +85,17 @@ const Dashboard = () => {
                                                     <Link className='text-dark' to={`${url}/review`}>Review</Link>
 
                                                 </li>
+                                                <li
+                                                    className="admin-menu p-2">
+                                                    <Link className='text-dark' to='/'>Home</Link>
+
+                                                </li>
                                             </div>
                                     }
 
 
+
+                                    <br />
                                     <Button variant='warning' onClick={logOut}>
                                         LogOut
                                     </Button>
